@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+  <typeAliases>
+    <!-- 새로운 테이블을 불러올 때 (config부분)-->
+    <typeAlias alias="portfoliovo" type="portfolio.portfoliovo"></typeAlias>
+    <typeAlias alias="smembervo" type="portfolio.smembervo"></typeAlias>
+    <typeAlias alias="noticevo" type="portfolio.noticevo"></typeAlias>
+    <typeAlias alias="productvo" type="portfolio.productvo"></typeAlias>
+    <typeAlias alias="shopsetupvo" type="portfolio.shopsetupvo"></typeAlias>
+  </typeAliases>
+
+</configuration>

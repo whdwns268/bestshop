@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="portfolioDB">
+
+<select id="selectall"  resultType="portfoliovo">
+select * from portfolio order by uidx desc
+</select>
+
+<update id="dataupdate">
+UPDATE portfolio SET mage = 'Y' WHERE uid = #{uid}
+</update>
+
+<select id="mselectall"  resultType="smembervo">
+select * from shop_member order by sidx desc
+</select>
+
+<select id="getTotalCount" resultType="int">
+          SELECT COUNT(*) FROM shop_member
+  <where>
+    <if test="searchMember == 'sid'  and memberInput != '' " >
+       sid = #{memberInput}
+    </if>
+    <if test="searchMember == 'sname' and memberInput != '' ">
+      sname = #{memberInput}
+    </if>
+    <if test="searchMember == 'smtel' and memberInput != ''">
+      smtel = #{memberInput}
+    </if>
+  </where>
+</select>
+
+<select id="memberselecet1" resultType="smembervo">
+        SELECT * FROM shop_member where sid=#{sid}
+</select>
+
+<select id="mselectPaging" parameterType="java.util.Map" resultType="smembervo">
+SELECT * FROM shop_member
+<if test="searchMember == 'sid'  and memberInput != '' ">
+    where sid = #{memberInput}
+    ORDER BY sidx DESC
+    LIMIT #{startRow}, #{pageSize}
+</if>
+
+
+ <if test="searchMember == 'sname'  and memberInput != '' ">
+    where sname = #{memberInput}
+    ORDER BY sidx DESC
+    LIMIT #{startRow}, #{pageSize}
+</if>
+
+ <if test="searchMember == 'smtel' and memberInput != ''  ">
+    where smtel = #{memberInput}
+    ORDER BY sidx DESC
+    LIMIT #{startRow}, #{pageSize}
+</if>
+
+ <if test="searchMember == null  or memberInput ==''">
+ORDER BY sidx DESC
+LIMIT #{startRow}, #{pageSize}
+</if>
+</select>
+   
+<update id="memberupdate">
+UPDATE shop_member
+SET slevel = #{slevel}, spoint = #{spoint}
+WHERE sid = #{sid}
+</update>  
+
+<update id="memberstate">
+UPDATE shop_member
+SET sstate = 'Y'
+WHERE sid = #{sid}
+</update>  
+   
+<delete id="memberdelete">
+  DELETE FROM shop_member
+  WHERE sid IN
+  <foreach item="item" collection="cksid" open="(" close=")" separator=",">
+    #{item}
+  </foreach>
+</delete>
+
+<insert id="noticeinsert">
+insert into shop_notice (nidx,nwriter,ntitle,nnotice,nfilename,nviews,nupdate,nprint)
+values ('0',#{nwriter},#{ntitle},#{nnotice},#{nfilename},'0',default,#{nprint})
+</insert>
+
+<select id="notice_all"  parameterType="java.util.Map" resultType="noticevo">
+select * from shop_notice 
+ORDER BY nidx DESC
+LIMIT #{startRow}, #{pageSize}
+</select>
+
+<select id="notice_api" resultType="noticevo">
+select * from shop_notice
+ORDER BY nidx DESC
+</select>
+
+<select id="noticeTotalCount" resultType="int">
+SELECT COUNT(*) FROM shop_notice
+</select>
+
+<select id="noticeOneSelect" resultType="noticevo">
+        SELECT * FROM shop_notice where nidx=#{nidx}
+</select>
+
+<update id="noticeupdate">
+UPDATE shop_notice
+SET ntitle = #{ntitle}, nprint = #{nprint}, nnotice = #{nnotice}
+WHERE nidx = #{nidx}
+</update>  
+
+<delete id="noticedelete">
+  DELETE FROM shop_notice
+  WHERE nidx IN
+ <foreach item="item" collection="nidxArray" open="(" close=")" separator=",">
+    #{item}
+ </foreach>
+</delete>
+
+<insert id="productinsert">
+insert into product_list (pidx,pbig,psmall,pcode,pname,pexplain,pprice,pdiscount,pdisprice,pea,pbuy,psold,pfile1,pfile2,pfile3,ptext,pdate)
+values ('0',#{pbig},#{psmall},#{pcode},#{pname},#{pexplain},#{pprice},#{pdiscount},#{pdisprice},#{pea},#{pbuy},#{psold},#{pfile1},#{pfile2},#{pfile3},#{ptext},default)
+</insert>
+
+<select id="pcodeSelect" resultType="integer">
+        SELECT COUNT(*) FROM product_list where pcode = #{pcodeck}
+</select>
+
+<select id="productlist" parameterType="java.util.Map" resultType="productvo">
+SELECT * FROM product_list
+<if test="searchMember == 'pcode'  and memberInput != '' ">
+    where pcode = #{memberInput}
+    ORDER BY pidx DESC
+    LIMIT #{startRow}, #{pageSize}
+</if>
+
+ <if test="searchMember == 'pname'  and memberInput != '' ">
+    where pname = #{memberInput}
+    ORDER BY pidx DESC
+    LIMIT #{startRow}, #{pageSize}
+</if>
+
+ <if test="searchMember == null  or memberInput ==''">
+ORDER BY pidx DESC
+LIMIT #{startRow}, #{pageSize}
+</if>
+</select>
+
+<select id="productCount" resultType="int">
+          SELECT COUNT(*) FROM product_list
+  <where>
+    <if test="searchMember == 'pname'  and memberInput != '' " >
+       pname = #{memberInput}
+    </if>
+    <if test="searchMember == 'pcode' and memberInput != '' ">
+      pcode = #{memberInput}
+    </if>
+  </where>
+</select>
+
+<delete id="productdelete">
+  DELETE FROM product_list
+  WHERE pcode IN
+ <foreach item="item" collection="pcodeArray" open="(" close=")" separator=",">
+    #{item}
+ </foreach>
+</delete>
+
+<insert id="userinsert">
+insert into shop_member (sidx,sid,spass,sname,smtel,stel,semail,saddress,slevel,spoint,slastdate,sjoindate,sadmail,sadsms,sstate,sleavedate)
+values ('0',#{sid},#{spass},#{sname},#{smtel},#{stel},#{semail},#{saddress},#{slevel},#{spoint},default,default,#{sadmail},#{sadsms},'N',default)
+</insert>
+
+<select id="setupselect" resultType="shopsetupvo" >
+   SELECT * FROM shop_setup where sidx=1;
+</select>
+
+<select id="pointck" resultType="String" >
+   SELECT spoint FROM shop_setup where sidx=1;
+</select>
+
+<select id="levelck" resultType="String" >
+   SELECT slevel FROM shop_setup where sidx=1;
+</select>
+
+<select id="stitle" resultType="String" >
+   SELECT stitle FROM shop_setup where sidx=1;
+</select>
+
+<update id="setup_update">
+UPDATE shop_setup
+SET
+  stitle = #{stitle},
+  semail = #{semail},
+  spointok = #{spointok},
+  spoint = #{spoint},
+  slevel = #{slevel},
+  swork = #{swork},
+  sno = #{sno},
+  sceo = #{sceo},
+  stel = #{stel},
+  snu = #{snu},
+  scnu = #{scnu},
+  sad = #{sad},
+  sare = #{sare},
+  sname = #{sname},
+  sema = #{sema},
+  sbank = #{sbank},
+  sbno = #{sbno},
+  scard = #{scard},
+  sphone = #{sphone},
+  smo = #{smo},
+  sdo = #{sdo},
+  spo = #{spo},
+  spaper = #{spaper},
+  sden = #{sden},
+  spri = #{spri},
+  sdilve = #{sdilve},
+  sdate = DEFAULT
+WHERE sidx = #{sidx};
+</update>
+
+<update id="banner_update">
+UPDATE shop_banner
+SET banner1 = #{banner1},
+	link1 = #{link1},
+	banner2 = #{banner2},
+	link2 = #{link2},
+	banner3 = #{banner3},
+	link3 = #{link3},
+	banner4 = #{banner4},
+	link4 = #{link4}
+WHERE bidx = '1'
+</update>  
+
+<select id="bannerapi" resultType="productvo">
+select * from shop_banner;
+</select>
+
+<select id="shoploginck" resultType="smembervo">
+select * from shop_member where sid=#{sid} and spass=#{spass};
+</select>
+
+<update id="adbanner_update">
+UPDATE ad_banner
+SET ad1_img = #{ad1_img},
+	ad1_link = #{ad1_link},
+	ad2_img = #{ad2_img},
+	ad2_link = #{ad2_link}
+WHERE bidx = '1'
+</update>  
+
+<select id="adbannerapi" resultType="productvo">
+select * from ad_banner;
+</select>
+
+<select id="prolistapi" resultType="productvo">
+select * from product_list ORDER BY pidx DESC;
+</select>
+
+<select id="faqapi" resultType="Map">
+select * from shop_faq;
+</select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

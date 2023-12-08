@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.prodiv1{
+   width: 1000px;
+   height: auto;
+   margin: 0 auto;
+   font-size: 13px;
+   color: #333333;
+   margin-bottom: 60px;
+}
+.pro_ul1{
+   margin-top: 20px;
+   width: inherit;
+   height: 30px;
+   display: flex;
+   font-size: 15px;
+   border-bottom: 2px solid #333333;
+}
+.pro_ul1 > li:nth-of-type(1){
+   color: red;
+}
+.pro_ul1 > li:nth-of-type(2){
+   margin-left: 5px;
+   font-weight: bold;
+}
+
+.setup_ul{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	border-bottom: 1px solid #333333;
+	display: flex;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.setup_ul > li:nth-of-type(1) {
+	width: 250px;
+	height: auto;
+}
+
+.setup_ul > li:nth-of-type(2) {
+	width: auto;
+	height: auto;
+}
+
+.setup_ul > li:nth-of-type(2) > ul{
+	display: flex;
+	align-items: center;
+	    flex-direction: column;
+	width: auto;
+	height: inherit;
+}
+
+.setup_ul > li:nth-of-type(2) > ul > li{
+	width: 800px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.setup_ul > li:nth-of-type(2) > ul > li > input[type="text" i] {
+	width: 500px;
+	height: 30px;
+}
+
+.setup_ul > li:nth-of-type(2) > ul > li > a {
+	color:red;
+}
+
+.setup_btn{
+	width: 1000px;
+	height: 60px;
+	display: flex;
+	justify-content: flex-end;
+    align-items: center;
+}
+.setup_btn > input {
+	width: 150px;
+	height: 45px;
+	background-color: rgb(81, 61, 61);
+	color:white;
+}

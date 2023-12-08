@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+.agree_div{
+	margin: 0 auto;
+	width: 1100px;
+	height: auto;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 12px;
+}
+
+.agree_div > span{
+	width: inherit;
+	height: 16px;
+	display: flex;
+	align-items:center;
+	font-size: 12px;
+    font-family: "Malgun Gothic","맑은 고딕","AppleGothic","Dotum","돋움",sans-serif;
+}
+
+.agree_title{
+	width: inherit;
+	height: 60px;
+	display: flex;
+	border-bottom: 1px solid #cccccc;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.agree_title > p{
+	font-size: 27px;	
+}
+
+.agree_title > ul{
+	width: auto;
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	color:#333333;
+	
+}
+.agree_title > ul > li{
+	width: auto;
+	height: 15px;
+	display: flex;
+	align-items: center;
+}
+.agree_title > ul > li:nth-of-type(1){
+	font-weight: bold;
+}
+
+.agree_title > ul > li > img {
+	width: 15px;
+	height: 15px;
+}
+
+.agree_ok{
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 750px;
+	height: auto;
+}
+
+.agree_ok > h3{
+	width: inherit;
+	height: 40px;
+	line-height: 40px;
+	color:#333333;
+	font-weight: 400;
+	border-bottom: 1px solid #cccccc;
+}
+
+.cklist1{
+	width: inherit;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	font-size:13px;
+	color: #333333;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: bold;
+}
+.cklist1 > a:nth-of-type(1) {
+	margin-left: 5px;
+}
+
+.cklist1 > a:nth-of-type(2) {
+	color:#cccccc;
+	font-size: 11px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+}
+
+.agree_box{
+	margin: 0 auto;
+	width: 750px;
+	height: auto;
+}
+
+.agree_box > span{
+	width: 750px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.agree_box > span > input[type="checkbox" i] {
+	height: 14px;
+	width: 14px;
+	margin-right: 5px;
+}
+
+.agree_box > span > a:nth-of-type(1) {
+	font-size: 13px;
+	color:#333333;
+	font-weight: bold;
+}
+
+.agree_box > span > a:nth-of-type(2) {
+	font-size: 13px;
+	color:#333333;
+}
+
+.agree_box > span > a:nth-of-type(3) {
+	font-size: 11px;
+	color:#CCCCCC;
+}
+
+.agree_box > span > em{
+	margin-left: 5px;
+	text-decoration: underline;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.agree_box > span > img{
+	width: 11px;
+	height: 11px;
+}
+
+.agree_box > div{
+	margin: 0 auto;
+	width: 740px;
+	height: 130px;
+	border: 1px solid black;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.agree_btn{
+	width: 750px;
+	margin: 0 auto;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.agree_btn > input{
+	width: 150px;
+	height: 45px;
+	background-color: #666666;
+	border: 1px solid #666666;
+	font-size: 14px;
+	color:#ffffff;
+}

@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+.list{
+	margin: 0px auto;
+	width: 1100px;
+	height: auto;
+}
+
+.list_top{
+	margin-top:20px;
+	width: 250px;
+	height: 30px;
+	display: flex;
+	font-size: 15px;
+	font-color: #333333
+}
+
+.list_top > li:nth-of-type(1) {
+	line-height: 30px;
+	color: red;
+}
+
+.list_top > li:nth-of-type(2) {
+	margin-left: 10px;
+	line-height: 30px;
+}
+
+.list_ul1{
+ 	display: flex;
+ 	align-items: center;
+	width: 1100px;
+	height: 30px;
+	background-color: rgb(81,61,61);
+	color:white;
+	
+}
+
+.ulset > ul{
+	display: flex;
+ 	align-items: center;
+	width: 1100px;
+	height: 30px;
+	background-color: white;
+	color:black;
+	border: 1px solid rgb(81, 61, 61);
+}
+
+.list_ul1 > li {
+  height: 25px;
+  border-right: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ulset > ul > li {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ulset > ul:nth-of-type(3) > li {
+  height: 25px;
+  border-right: 0px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ulset > ul{
+	background-color: white;
+	color:black;
+	border: 1px solid rgb(81, 61, 61);
+	box-sizing: border-box;
+}
+
+.list_ul_none{
+	height:30px;
+	border: 1px solid rgb(81, 61, 61);
+	box-sizing: border-box;
+}
+
+.list_ul_none > li{
+	width: 1100px;
+	text-align: center;
+}
+
+.ulset > ul > li:nth-of-type(1) ,.list_ul1 > li:nth-of-type(1) {
+	width: 50px;
+}
+
+.ulset > ul > li:nth-of-type(2) , .list_ul1 > li:nth-of-type(2) {
+	width: 120px;
+}
+
+.ulset > ul > li:nth-of-type(3), .list_ul1 > li:nth-of-type(3) { 
+	width: 140px;
+}
+
+.ulset > ul > li:nth-of-type(4), .list_ul1 > li:nth-of-type(4) {
+	width: 150px;
+}
+
+.ulset > ul > li:nth-of-type(5), .list_ul1 > li:nth-of-type(5) {
+	width: 230px;
+}
+
+.ulset > ul > li:nth-of-type(6), .list_ul1 > li:nth-of-type(6) {
+	width: 100px;
+}
+
+.ulset > ul > li:nth-of-type(7), .list_ul1 > li:nth-of-type(7) {
+	width: 80px;
+}
+
+.ulset > ul > li:nth-of-type(8), .list_ul1 > li:nth-of-type(8) {
+	width: 120px;
+}
+
+.ulset > ul > li:nth-of-type(9), .list_ul1 > li:nth-of-type(9) {
+	width: 110px;
+	border-right: none;
+	justify-content: space-evenly;
+}
+
+.list_btn{
+	width: 45px;
+	height: 20px;
+	background-color: #000000;
+	font-size: 12px;
+	color:white;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="./css/default.css?v=2">
+<link rel="stylesheet" type="text/css" href="./css/add_master.css?v=2">
+<link rel="stylesheet" type="text/css" href="./css/font.css?v=3">
+<script src="./js/add_master.js?v=3"></script>
+</head>
+<body>
+<form id="joinok" action="./joinok.do" method="post">
+<section class="master_sc">
+<div class="master_box">
+<ul class="matsr_ulcss">
+<li>아이디 및 패스워드 정보</li>
+
+<li>
+<input type="text" placeholder="생성할 관리자 아이디를 입력하세요" class="tt1" name="uid" id="uid">
+<input type="button" value="중복체크" class="bt_ck" onclick="id_ck()">
+</li>
+
+<li>
+<input type="password" placeholder="접속할 패스워드를 입력하세요" class="tt1" id="pw1" name="upass">
+<input type="password" placeholder="동일한 패스워드를 입력하세요" class="tt1" id="pw2">
+</li>
+
+<li>관리자 기본정보 입력</li>
+
+<li><input type="text" placeholder="담당자 이름을 입력하세요" class="tt1" id="uname" name="uname"></li>
+
+<li><input type="text" placeholder="담당자 이메일을 입력하세요" class="tt1_550" id="umail" name="umail"></li>
+
+<li>
+<input type="text" placeholder="010" maxlength="3" class="tt1_80" name="utel">-
+<input type="text" placeholder="1234" maxlength="4" class="tt1_100" name="utel">-
+<input type="text" placeholder="1234" maxlength="4" class="tt1_100" name="utel">
+</li>
+
+<li>관리자 담당부서 및 직책</li>
+
+<li>
+<select class="se_160" name="udepart">
+	<option value="">담당자 부서를 선택하세요</option>
+	<option value="임원">임원</option>
+	<option value="전산팀">전산팀</option>
+	<option value="디자인팀">디자인팀</option>
+	<option value="CS">CS팀</option>
+	<option value="MD">MD팀</option>
+	<option value="영업팀">영업팀</option>
+</select>
+
+<select class="se_160" name="uposition">
+	<option value="">담당자 직책을 선택하세요</option>
+	<option value="대표">대표</option>
+	<option value="부장">부장</option>
+	<option value="팀장">팀장</option>
+	<option value="과장">과장</option>
+	<option value="대리">대리</option>
+	<option value="주임">주임</option>
+	<option value="사원">사원</option>
+	</select>
+</li>
+
+<li>가입완료 후 전산담당자가 확인 후 로그인 할 수 있습니다.</li>
+
+<li class="btnli">
+<input type="button" value="관리자등록" class="bt_up" onclick="joinbtn()">
+<input type="button" value="등록취소" class="bt_ck" onclick="cancle()">
+<input type="hidden" value="N" name="mage">
+</li>
+</ul>
+</div>
+</section>
+</form>
+</body>
+</html>

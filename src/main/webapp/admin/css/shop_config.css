@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+.config_form{
+	width: 100%;
+	height: auto;
+	
+}
+
+.config_form_back{
+	width: 1000px;
+	height: auto;
+	margin:0 auto;
+	font-size: 15px;
+	color:#333333
+}
+
+.list_top{
+	margin-top:20px;
+	width: 1000px;
+	height: 30px;
+	display: flex;
+	font-size: 15px;
+	font-color: #333333;
+	border-bottom: 1px solid black;
+}
+/** 신규등록 관리자**/
+.list_top > li:nth-of-type(1) {
+	line-height: 30px;
+	color: red;
+}
+
+.list_top > li:nth-of-type(2) {
+	margin-left: 10px;
+	line-height: 30px;
+}
+
+/* 인풋속성 */
+input{
+box-sizing: border-box;
+text-indent: 5px;
+}
+
+.input_80{
+	width: 80px;
+	height: 30px;
+}
+
+.input_200{
+	width: 200px;
+	height: 30px;
+}
+
+.input_250{
+	width: 250px;
+	height: 30px;
+}
+
+.input_300{
+	width: 300px;
+	height: 30px;
+}
+
+.radio_label{
+	width: 110px;
+	float: left;
+}
+/* 여기부터 테이블 */
+
+.tablecss{
+	width: 1000px;
+	height: auto;
+	border-collapse: collapse;
+	font-size: 15px;
+	font-color: #333333;
+	
+}
+
+.tablecss > tbody > tr{
+	width: inherit;
+	height: 40px;
+	border-bottom: 1px solid;
+}
+
+.tablecss > tbody > tr > td{
+	box-sizing: border-box;
+	height: 40px;
+}
+
+.tablecss > tbody > tr > td:nth-of-type(1), .tablecss > tbody > tr > td:nth-of-type(3){
+	width: 150px;
+}
+.tablecss > tbody > tr > td:nth-of-type(2),.tablecss > tbody > tr > td:nth-of-type(4){
+	width: 350px;
+}
+
+/* 테이블설정 끝 */
+
+.config_form_btnbakc{
+	margin-top: 20px;
+	width: 1000px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+}
+
+.config_form_btnbakc > input[type=button] {
+	width: 150px;
+	height: 45px;
+	background-color: #000000;
+	color:white;
+	margin-left:15px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.config_form_btnbakc > input[type=button]:nth-of-type(1) {
+	background-color:  #513D3D;	
+}

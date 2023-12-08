@@ -1,0 +1,195 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header_css{
+    height: auto;
+    background-color: gray;
+}
+.topcss {
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav_css{
+    height: 50px;
+
+}
+
+.menucss{
+    width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.section_banner_css{
+    height: 450px;
+}
+
+.banner_css{
+    width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.section_newproduct_css{
+    margin-top: 30px;
+    height: auto;
+}
+
+.newproduct_css{
+    width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.section_ad_css{
+    margin-top: 30px;
+    height: auto;
+}
+
+.advertisementcss{
+    width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.article_mdpick_css{
+    margin-top: 30px;
+    height: auto
+}
+
+.mdpickcss{
+    width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.section_noti_newtd_css{
+    margin:30px auto;
+    margin-top: 50px;
+    height: 450px;
+    width: 1100px;
+    border-top: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.aside_notice_css{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+}
+
+.noticecss{
+    
+    height: inherit;
+}
+
+.aside_newtrend_css{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+}
+
+.newtrendcss{
+    width: 500px;
+    height: inherit;
+}
+
+.section_ad_bottom_css{
+    margin-top: 30px;
+    height: auto;
+}
+
+.advertisementcss_bottom{
+    width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.footer_css{
+    width: 100%;
+    margin-top: 30px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.copycss{
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+/*로그인 페이지 css*/
+.section_login_css{
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.logincss{
+    margin-top: 30px;
+    height: 350px;
+    background-color: rgb(42, 62, 47);
+}
+
+.faqcss{
+    width: 100%;
+    height: auto;
+}
+
+
+html,body{
+	margin:0;
+	padding:0;
+	height: 100%;
+    font-size: 12px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,form,fieldset{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+button{
+	cursor:pointer;
+	border:0;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+	cursor:pointer;
+	border:0;
+}
+
+ul,ol,dl{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+select{	margin:0;}
+
+a:link, a:visited a:hover, a:focus a:active{
+	color: #000; text-decoration: none;
+}
+
+p{margin:0; padding:0; word-break:break-all;}
+
+span, label{display:block;}
+
+.clear{
+	clear:bot
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }

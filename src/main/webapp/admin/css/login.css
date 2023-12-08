@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+
+header{
+	margin: 0 auto;
+	display: flex;
+	width: 600px;
+	height: 33px;
+	line-height:33px;
+}
+
+header > img{
+	width: 30px;
+	height: 33px;
+}
+
+header > a{
+	margin-left:7px;
+	font-size: #cccccc;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.sc{
+	width: 100%;
+	height: 300px;
+	background-color: #161616;
+}
+
+.boxcss{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 600px;
+	height: 280px;
+	margin: 0 auto;
+	background-color: rgb(61,60,60);
+	border: 3px solid gray;
+	box-sizing:border-box;
+	position: relative; /* absolute position을 사용하기 위해 position을 설정합니다. */
+	top: 50%; /* 세로 중앙 정렬을 위해 top 값을 50%로 설정합니다. */
+	transform: translateY(-50%); /* 위에서 50% 이동시켜 세로 중앙에 오도록 합니다. */
+}
+
+
+.ulcss_login{	
+	display: flex;
+	width: 600px;
+	height: 80px;
+	margin: 0 auto;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.ulcss_login > li{
+	width: 250px;
+	height: 30px;
+}
+
+.text{
+	text-indent:5px;
+	width: 250px;
+	height: 30px;
+	box-sizing:border-box;
+}
+
+
+.ulcss_login > li:nth-of-type(3){
+	width: 150px;
+	height: 80px;
+	margin-left:100px;
+}
+
+.btn{
+	width: 150px;
+	height: 80px;
+	background-color: #734F4F;
+	color: white;
+}
+
+.admin_noti{
+	
+	margin-top:40px;
+	width: 600px;
+	height: 30px;
+	color: #cccccc;
+	text-align:center;
+	font-size: 12px;
+}
+
+.ulcss_join{
+	margin:20px auto;
+	display:flex;
+	justify-content: space-between;
+	width: 550px;
+	height: 40px;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+label{
+	cursor: pointer;
+	line-height: 40px;
+}
+
+
